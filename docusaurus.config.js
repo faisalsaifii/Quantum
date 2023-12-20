@@ -4,7 +4,7 @@ import { themes as prismThemes } from 'prism-react-renderer';
 const config = {
   title: 'Artificial Intelligence',
   favicon: 'img/favicon.ico',
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://aidocz.vercel.app',
   baseUrl: '/',
   organizationName: 'faisalsaifii', // Usually your GitHub org/user name.
   projectName: 'AI-Docs', // Usually your repo name.
@@ -27,7 +27,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/faisalsaifii/AI-Docs',
+            'https://github.com/faisalsaifii/AI-Docs/tree/main',
         },
         theme: {
           customCss: './src/css/custom.css',
