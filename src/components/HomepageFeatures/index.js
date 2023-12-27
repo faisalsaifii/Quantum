@@ -8,7 +8,7 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Simple and easy to understand. You can learn AI from scratch.
+        Simple and easy to understand
       </>
     ),
   },
@@ -17,7 +17,7 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Only focus on what matters. You can learn AI without any distraction.
+        Only focus on what matters
       </>
     ),
   },
@@ -26,7 +26,7 @@ const FeatureList = [
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        This docuemntation is powered by React for a great user experience.
+        Powered by React
       </>
     ),
   },

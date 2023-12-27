@@ -1,4 +1,6 @@
-# Artificial Intelligence Documentation
+# Quantum
+
+One place for all the docs you need.
 
 ## Installation
 

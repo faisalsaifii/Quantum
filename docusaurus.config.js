@@ -2,12 +2,12 @@ import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Artificial Intelligence',
+  title: 'Quantum',
   favicon: 'img/favicon.ico',
-  url: 'https://aidocz.vercel.app',
+  url: 'https://quantumdocs.vercel.app',
   baseUrl: '/',
   organizationName: 'faisalsaifii', // Usually your GitHub org/user name.
-  projectName: 'AI-Docs', // Usually your repo name.
+  projectName: 'Quantum', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -27,7 +27,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/faisalsaifii/AI-Docs/tree/main',
+            'https://github.com/faisalsaifii/Quantum/tree/main',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -42,7 +42,7 @@ const config = {
       // Replace with your project's social card
       image: 'https://img.freepik.com/free-vector/ai-technology-microchip-background-vector-digital-transformation-concept_53876-117808.jpg',
       navbar: {
-        title: 'Artificial Intelligence',
+        title: 'Quantum',
         logo: {
           alt: 'Logo',
           src: 'img/logo.svg',
@@ -55,7 +55,7 @@ const config = {
             label: 'Tutorial',
           },
           {
-            href: 'https://github.com/faisalsaifii/AI-Docs',
+            href: 'https://github.com/faisalsaifii/Quantum',
             label: 'GitHub',
             position: 'right',
           },

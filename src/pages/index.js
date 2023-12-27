@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <Layout
       title={`${siteConfig.title}`}
-      description="The only place to learn AI">
+      description="One place for all the docs you need">
       <HomepageHeader />
       <main>
         <HomepageFeatures />
