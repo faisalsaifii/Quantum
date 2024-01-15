@@ -52,7 +52,13 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Artificial Intelligence',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'tutorialSidebar',
+            position: 'left',
+            label: 'Cloud Computing',
           },
           {
             href: 'https://github.com/faisalsaifii/Quantum',
@@ -68,8 +74,12 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/about',
+                label: 'Artificial Intelligence',
+                to: '/docs/Artificial Intelligence/about',
+              },
+              {
+                label: 'Cloud Computing',
+                to: '/docs/Cloud Computing/about',
               },
             ],
           },
@@ -82,7 +92,7 @@ const config = {
               },
               {
                 label: 'Linkedin',
-                href: 'https://www.linkedin.com/in/faisalsaifii/',
+                href: 'https://www.linkedin.com/in/faisalsaifii',
               },
               {
                 label: 'Twitter',
