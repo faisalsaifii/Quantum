@@ -2,9 +2,9 @@
 sidebar_position: 8
 ---
 
-# Robot
+# Robots
 
-## Robots
+## Definition of Robots
 
 - Robots are the artificial agents acting in real world environment
 - Robots are aimed at manipulating hte objects by perceiving, picking, moving, modifying the physical properties of object, destroying it, or to have an effect thereby freeing manpower from doing repetitive functions without getting bored, distracted, or exhausted

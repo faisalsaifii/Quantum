@@ -1,0 +1,124 @@
+---
+sidebar_position: 3
+---
+
+# Constraint
+
+## Constraint Satisfaction (Imp)
+
+Constraint satisfaction is a search procedure that operates in a space of constraint sets. The initial state contains the constraints that are originally given in the problem description.
+
+The general form of the constraint satsifaction procedure is:
+
+1. Select an unexpected node of the search graph
+2. To generate all possible new constraints, apply the constraint inference rule to the selected node
+3. If the set of constraints contain a contradiction, then report that this path is a dead end
+4. To report success, if the set of constraints, a contradiction describes a complete solution
+5. If neither a contradiction nor a complete solution has been found then apply the problem space rules to generate new partial solutions that are consistent with the current set of constraints. Insert these partial solutions into the search graph
+
+## Crypt Arithmetic Problems
+
+-   We have to assign digits to letters in such a way that the resulting arithmetic is correct. The letters represent distinct digits.
+-   Each letter represents a single digit
+-   The leading letter of a word cannot be assigned the digit 0
+-   No two letters can be assigned the same digit
+
+### Examples
+
+#### Example 1
+
+```
+  CROSS
++ ROADS
+-------
+ DANGER
+```
+
+-   Assume `D = 1`
+-   `2S = R`
+-   `C + R > 9 or 8`
+-   `S + 1 = E => S = E - 1`
+
+Hence, after guessing
+
+```
+  96233
++ 62513
+-------
+ 158746
+```
+
+#### Example 2
+
+```
+  SEND
++ MORE
+------
+ MONEY
+```
+
+Initial guess, `M = 1` since sum of two single digits can generate at most a carry of `1`
+
+```
+  SEND
++ 1ORE
+------
+ 1ONEY
+```
+
+If `M = 1`, then `S` should either be `8` or `9` because `S + M` has to produce `1` as the carry-over digit. The carry would come from previous addition in case of `8`.
+
+```
+  9END
++ 1ORE
+------
+ 1ONEY
+```
+
+When `M = 1` & `S = 8 or 9`, the two digit result of `M+S` can either be `10` or `11`. That is, `O` will be either `0` or `1`. But, `1` is already assigned to `M` so it can not be assigned to any other digit. Thus, `O = 0`, `(M+S) = 10`. `S` can be `8 or 9` depending on the carry.
+
+```
+  9END
++ 10RE
+------
+ 10NEY
+```
+
+Now, `E + 0 = N`, which is only possible if there's a carry of `1` because we do not know the value of `E`. Thus, `N = E + 1` and `Carry 2 = 1` (Above E + O). Since we don't know value of `E`, we will assume it as `5`
+
+```
+  95ND
++ 10RE
+------
+ 10N5Y
+```
+
+Again we will assume value for `C1 = 1` since we don't know it. Hence assume `D = 7` and `Y = 2` which solves the question
+
+```
+  9567
++ 1085
+------
+ 10652
+```
+
+## Constraint Propagation
+
+-   Combined approach of heuristic plus forward checking gives more reliable, accurate and efficient results than a singular approach
+-   Forward checking propagates information from designed to unassigned variable but cannot avoidor detect all failure
+-   Constraint propagation repeatedly enforces constraints locally.
+-   The sides of arc consistency provide a fast method of constraint propagation that is substantially stronger than forward checking. Here "arc" refers to a directed arc in the constraint graph.
+
+### Constraint propagation using arc consistency
+
+-   It is fast method of constraint propagation.
+-   `X -> Y`is consistent if (for every value of X there is source allowed value Y. For example: V<sub>2</sub> > V<sub>1</sub> is consistent iff V<sub>1</sub> = Red, V<sub>2</sub> = Blue (i.e., for every value of x in X there is some allowed valuey in y in Y). This is directed property example: V<sub>1</sub> = V
+-   As directed arcs between variables represent the domains of specified
+    variables, they are consistent with each other.
+    -   V<sub>1</sub> = V<sub>2</sub> is consistent if
+    -   V<sub>1</sub> = Red and V<sub>2</sub> = Blue
+-   Constraint propagation can be applied as preprocessing or propagation
+    step:
+    -   Before search-preprocessing
+    -   After search-propagation
+-   The procedure for maintaining arc consistency can be applied repeatedly.

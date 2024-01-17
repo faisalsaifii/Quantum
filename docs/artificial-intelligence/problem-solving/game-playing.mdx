@@ -1,0 +1,43 @@
+---
+sidebar_position: 5
+---
+
+# Game Playing
+
+## Game Playing as candidate for AI (Imp)
+
+-   A good candidate for AI has following characteristics:
+    -   Contains a large amount of domain-specific knowledge
+    -   It contains computationally complex problems
+    -   Can be developed as a repository for the knowledge of several experts
+-   Let us consider an example of game playing, an intelligent system that plays chess
+    -   Rules of chess are easy to learn, but to play this game at an expert level is not easy because it has 10<sup>120</sup> possible games. This 10<sup>120</sup> possible games of chess satisfy the first characteristics of good candidate for AI i.e., large amount of domain-specific knowledge.
+    -   These 10<sup>120</sup> possible games of chess have equally large and complex moves by various chess pieces (i.e., pawns, rooks, king, etc.). These are computationally complex problems which cannnot be solved by straightforward algorithms. This satisfies the second characteristics of good candidate for AI.
+    -   The chess program is built based on the inputs from several expert chess players. It has enormous amount of knowledge about chess (domain-specific knowledge) that it uses as part of its decision making process. This satisfies the third characteristics of good candidate for AI.
+
+Hence we can say that game playing is good candidate for AI
+
+## Game Tree
+
+-   A directed graph whose nodes are positions in a game and whose edges are moves
+-   Complete game tree for a game is the game tree starting at the initial position and containing all possible moves from each position
+-   The rotations and reflections of positions are equivalent, so the first player has three choices of move: in the center, at the edge, or in the corner.
+-   The second player has two choices for the reply if the first player played in the center otherwise five choices and so on.
+-   The number of leaf nodes in the complete game tree is the number of possible different ways the game can be played
+-   For example, the game tree for tic-tac-toe has 255,168 leaf nodes
+
+### Purpose of minimax procedure
+
+-   For many complex games such as chess, search to termination is impossible, i.e., a win or draw cannot be obtained
+-   Our goal in searching such a game-tree might be to find a good first move
+-   This good first move can be extracted by minimax procedure
+
+### Minimax Algorithm
+
+1. Set `FINAL_VALUE` to be minimum as possible
+2. If limit of search is reached, then `FINAL_VALUE = GOOD_VALUE` of the current position
+3. Else do
+   3.1. Generate the successors of the position
+   3.2. Recursively call `MIN-MAX `again with the present position with depth incremented by unity
+4. Evaluate the `GOOD_VALUE`
+5. If `GOOD_VALUE > FINAL_VALUE`, then `FINAL_VALUE = GOOD_VALUE`

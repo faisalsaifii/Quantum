@@ -10,7 +10,7 @@ sidebar_position: 5
 
 ## Role
 
-## Phases
+## Five Phases in NLP
 
 ### Lexical analysis
 
@@ -31,3 +31,12 @@ The meaning of any sentence depends upon the meaning of the sentence just before
 ### Pragmatic analysis
 
 During pragmatic analysis, what was said is re-interpreted on what it actually meant. It involves deriving those aspects of language which require real world knowledge.
+
+```mermaid
+flowchart TB
+direction TB
+id2[Lexical Analysis] --> id3[Syntactic Analysis]
+id3[Syntactic Analysis] --> id4[Semantic Analysis]
+id4[Semantic Analysis] --> id5[Discourse Integration]
+id5[Discourse Integration] --> id6[Pragmatic Analysis]
+```
