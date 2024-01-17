@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Definition
 
-## AI
+## What is AI
 
 Artificial Intelligence is the ability of computers to simulate natural intelligence by learning from experience and doing tasks just like humans can and that too without the need of any intervention from human beings.
 
