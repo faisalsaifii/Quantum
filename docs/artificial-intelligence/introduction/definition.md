@@ -36,7 +36,7 @@ Artificial Intelligence is the ability of computers to simulate natural intellig
 - Robots are used where the takss are difficult for humans to perform
 - For example, car assemply lines, in hospitals, office cleaner, serving foods and preparing foods in hotels etc.
 
-## Role of Machine Intelligence in human life
+## Role of Machine Intelligence in human life (Imp)
 
 - Machine intelligence is the intelligence provided to the particular machine to achieve the goals of the problems in AI
 - It is defined as the embedding of intelligence in the machine so that the machine can behave like a human
@@ -65,7 +65,7 @@ Artificial Intelligence is the ability of computers to simulate natural intellig
 - A language is a system of signs having meaning-by-convention
 - The meaning-by-convention is distinctive of language and is very different from natural meaning
 
-## Four Categoriges of AI Classification
+## Four Categoriges of AI Classification (Imp)
 
 ### Reactive Machines
 

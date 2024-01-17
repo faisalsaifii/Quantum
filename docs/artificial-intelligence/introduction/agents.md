@@ -4,28 +4,28 @@ sidebar_position: 3
 
 # Agents
 
-## Definition of Agent
+## Agent (Imp)
 
 - An agent can be anything that perceive its environment through sensors and act upon that environment through actuators
 - An agent runs in the cycle of perceiving, thinking, and acting
 - To understand the structure of intelligent agents, we should be familiar with architecture and agent program
 - `Agent = Architecture + Agent Program`
 
-## Architecture
+### Architecture
 
-- Architecture is the machinery that the agent executes on. It is a device with sensors and actuators, for example: a robotic car, a camera, a PC.
+Architecture is the machinery that the agent executes on. It is a device with sensors and actuators, for example: a robotic car, a camera, a PC.
 
-## Agent Program
+### Agent Program
 
-- Agent program is the implementation of agent function
+Agent program is the implementation of agent function
 
-## Agent Function
+### Agent Function
 
-- Agent function is a map from the percept sequence to an action
+Agent function is a map from the percept sequence to an action
 
-## When is an agent program considered intelligent?
+### When is an agent program considered intelligent?
 
-- An agent program is an intelligent agent program if it follows the weak notion (i.e., flexibility, interactivity, and autonomy) and strong notion (i.e., information-related states, connotative states and affective states)
+An agent program is an intelligent agent program if it follows the weak notion (i.e., flexibility, interactivity, and autonomy) and strong notion (i.e., information-related states, connotative states and affective states)
 
 ## Intelligent Agent (Imp)
 
@@ -47,6 +47,19 @@ flowchart LR
 - These agents only succeed in the fully observable environment
 - The simple reflex agent works on condition-action rule, which means it maps the current state to action
 - It acts according to a rule whose condition matches the current state, as defined by the percept
+
+```mermaid
+flowchart TB
+    subgraph Agent
+        direction TB
+        id1(Sensors) --> id2[What the world is like now]
+        id2[What the world is like now] --> id3[What action I should do now]
+        id5(Condition-action rules) --> id3[What action I should do now]
+        id3[What action I should do now] --> id4(Actuators)
+    end
+    Environment --> id1(Sensors)
+    id4(Actuators) --> Environment
+```
 
 ### Model-based Reflex Agent
 
@@ -141,7 +154,7 @@ Responsible for selecting external action
 - Responsible for suggesting actions that will lead to new and informative experiences
 - It also suggests exploratory actions
 
-### Characteristics of Learning Agent
+### Characteristics of Learning Agent (Imp)
 
 #### Situatedness
 
@@ -159,7 +172,7 @@ This agent characteristics means that it is capable of reacting flexibly to chan
 
 This type of characteristic means that the agent is capable of interacting in a peer-to-peer manner with other agents or humans
 
-### Applications of learning agent
+### Applications of learning agent (Imp)
 
 1. Clustering
 2. Classification

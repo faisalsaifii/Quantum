@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Future of AI
 
-## Evolution of AI
+## Evolution of AI (Imp)
 
 ### Beginning of AI (1943)
 
