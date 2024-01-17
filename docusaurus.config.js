@@ -81,7 +81,7 @@ const config = {
             items: [
               {
                 label: 'Artificial Intelligence',
-                to: '/docs/Artificial Intelligence/about',
+                to: '/docs/category/artificial-intelligence',
               },
               // {
               //   label: 'Cloud Computing',
