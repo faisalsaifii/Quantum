@@ -16,6 +16,13 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
+  markdown: {
+    mermaid: true,
+  },
+  themes: [
+    '@docusaurus/theme-mermaid',
+    // '@docusaurus/theme-search-algolia'
+  ],
 
   presets: [
     [
@@ -24,8 +31,6 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
             'https://github.com/faisalsaifii/Quantum/tree/main',
         },
@@ -40,7 +45,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'https://img.freepik.com/free-vector/ai-technology-microchip-background-vector-digital-transformation-concept_53876-117808.jpg',
+      image: 'img/social-card.jpg',
       navbar: {
         title: 'Quantum',
         logo: {
@@ -54,12 +59,12 @@ const config = {
             position: 'left',
             label: 'Artificial Intelligence',
           },
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Cloud Computing',
-          },
+          // {
+          //   type: 'docSidebar',
+          //   sidebarId: 'tutorialSidebar',
+          //   position: 'left',
+          //   label: 'Cloud Computing',
+          // },
           {
             href: 'https://github.com/faisalsaifii/Quantum',
             label: 'GitHub',
@@ -77,10 +82,10 @@ const config = {
                 label: 'Artificial Intelligence',
                 to: '/docs/Artificial Intelligence/about',
               },
-              {
-                label: 'Cloud Computing',
-                to: '/docs/Cloud Computing/about',
-              },
+              // {
+              //   label: 'Cloud Computing',
+              //   to: '/docs/Cloud Computing/about',
+              // },
             ],
           },
           {
