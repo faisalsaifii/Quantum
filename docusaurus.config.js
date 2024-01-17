@@ -23,6 +23,7 @@ const config = {
     '@docusaurus/theme-mermaid',
     // '@docusaurus/theme-search-algolia'
   ],
+  plugins: [require.resolve('docusaurus-lunr-search')],
 
   presets: [
     [

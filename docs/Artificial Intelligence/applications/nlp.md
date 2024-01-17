@@ -2,7 +2,11 @@
 sidebar_position: 5
 ---
 
-# Natural Language Processing
+# Natural Language Processing (NLP)
+
+## What is Natural Language Processing (NLP)?
+
+- Natural Language Processing (NLP)
 
 ## Role
 
