@@ -187,3 +187,62 @@ It tells us how good the solution is. So, an algorithm or a search process is sa
 - Change the value of f' for the newly created node to reflect its successors by back propagation
 - Wherever possible use the most promising routes and if a node is marked as SOLVED then mark the parent node as SOLVED
 - If starting node is SOLVED or value greater than FUTILITY, stop, else repeat from 2.
+
+## Hill Climbing Algorithm (Imp)
+
+- A local search algorithm that continually moves in the direction of increasing values, that is, uphill (the goal)
+- Terminates when reaches a "peak" where no enighbor has a higher value
+- Does not maintain a search tree, so current node data structure only records the state and its objective function value
+
+### Algorithm of Hill Climbing
+
+- Evaluate the initial state. If it is a goal state then return success and stop, else continue with the initial state as the current state
+- Loop until a solution is found or until there are no new operators left to be applied in the current state
+  - Select an operator that has not yet been applied to the current state and apply it to produce a new state
+  - Evaluate the new state
+    - If it is goal state, then return it and quit
+    - If it is not a goal state but it is better than the current state then make it the current state
+    - If it is not better than the current state, then continue in the loop
+
+### Drawbacks of Hill Climbing
+
+#### 1. Local Maxima
+
+- A local maximum is a peak that is higher than each of its neighbouring states, but lower than the global maximum
+- Hill climbing algorithms that reach the vicinity of a local maximum will be drawn upwards towards the peak, but will then be stuck with nowhere else to go
+- **Overcoming:**
+  - Backtrack to some earlier node and try going in a different direction
+  - To implement this strategy, maintain a list of paths almost taken and go back to one of them if the path was taken leads to a dead end
+
+#### 2. Plateau
+
+- It is a flat area of the search space in which a whole set of neighbouring states have the same value
+- A hill climbing search might not be able to find its way off the plateau
+- **Overcoming:**
+  - Make big jump in some direction to try to get to a new section of the search space
+  - If the only rules available describe single small steps, apply them several times in the same direction
+
+#### 3. Ridges
+
+- Ridges result in a sequence of local maxima that is very difficult for greedy algorithms to navigate
+- **Overcoming:**
+  - Apply two or more rules before doing the test
+  - This corresponds to moving in several directions at once
+  
+## Water Jug Problem (Imp)
+
+- You are given two jugs, a 4 litres and a 3 litres one. Neither has any measuring marker on it. There is a pump that can be used to fill the jugs with water. How can you get exactly 2 litres of water in the 4 litres jug?
+- The state space for this problem can be represented by ordered pairs of integers (x,y) such that x = 0, represents the quantity of water in the 4 litres jug and y = 0, represents the quantity of water in the 3 litres jug
+- The initial state is (0,0) and the goal state is (2,n)
+
+### Algorithm for Water Jug Problem
+
+| S.No. | Action | Description |
+| --- | --- | --- |
+| 1. | (x,y) -> (0,3) | Fill the 3 litres jug |
+| 2. | (x,y) -> (3,0) | Pour the water from 3 litres jug to 4 litres jug until the 3 litres jug is empty |
+| 3. | (x,y) -> (3,3) | Fill the 3 litres jug again |
+| 4. | (x,y) -> (4,2) | Pour the water from 3 litres jug to 4 litres jug until the 4 litres jug is full |
+| 5. | (x,y) -> (0,2) | Empty the 4 litres jug |
+| 6. | (x,y) -> (2,0) | Pour the water from 3 litres jug to 4 litres jug |
+| 7. | (x,y) -> (2,0) | Now the 4 litres jug would have 2 litres of water |
