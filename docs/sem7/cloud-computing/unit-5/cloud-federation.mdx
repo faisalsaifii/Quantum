@@ -1,0 +1,149 @@
+---
+sidebar_position: 5
+---
+
+import Image from '@theme/IdealImage';
+
+# Cloud Federation
+
+Cloud Federation, or Federated Cloud, involves deploying and managing multiple external and internal cloud computing services to meet business requirements. It's a multinational cloud system that combines private, community, and public clouds into scalable computing platforms. This federation is established by connecting the cloud environments of different providers using a common standard.
+
+<div style={{textAlign: 'center'}}>
+
+<Image img={require('/img/cloud-computing/federated-cloud.png')} height={400} />
+
+</div>
+
+## Architecture of Federated Cloud
+
+The architecture of Federated Cloud comprises three fundamental components:
+
+1. **Cloud Exchange:**
+
+    - _Role:_ Acts as a mediator between the cloud coordinator and cloud broker.
+    - _Function:_ Maps the demands of the cloud broker to available services from the cloud coordinator.
+    - _Information:_ Maintains records of present costs, demand patterns, and available cloud providers, periodically updated by the cloud coordinator.
+
+2. **Cloud Coordinator:**
+
+    - _Role:_ Assigns cloud resources to remote users based on demanded quality of service and available credits in the cloud bank.
+    - _Management:_ Manages cloud enterprises and their memberships through the cloud controller.
+
+3. **Cloud Broker:**
+    - _Interaction:_ Interacts with the cloud coordinator.
+    - _Analysis:_ Evaluates Service-level agreements and resources offered by various cloud providers in the cloud exchange.
+    - _Decision-making:_ Finalizes the most suitable deal for their client based on the analysis of available options.
+
+**Properties of Federated Cloud:**
+
+1. **Interaction Flexibility:**
+
+    - _Centralized:_ Users can interact centrally through a broker mediating between them and the organization.
+    - _Decentralized:_ Users can interact directly with clouds in the federation.
+
+2. **Applicability Across Niches:**
+
+    - Federated cloud can be applied in various niches, including commercial and non-commercial contexts.
+
+3. **Visibility Enhancement:**
+
+    - The visibility of a federated cloud aids users in understanding the organization of multiple clouds in the federated environment.
+
+4. **Monitoring Mechanisms:**
+
+    - _MaaS (Monitoring as a Service):_ Provides information for tracking contracted services to the user.
+    - _Global Monitoring:_ Aids in overall maintenance of the federated cloud.
+
+5. **Offer Publication and Verification:**
+
+    - Providers in the federation publish their offers to a central entity.
+    - Users interact with this central entity to verify prices and propose offers.
+
+6. **Federation Role in Consumption:**
+    - Marketing objects such as infrastructure, software, and platform must pass through the federation when consumed in the federated cloud.
+
+**Benefits of Federated Cloud:**
+
+1. **Energy Consumption Reduction:**
+
+    - Minimizes energy consumption, contributing to environmental sustainability.
+
+2. **Increased Reliability:**
+
+    - Enhances reliability in service delivery.
+
+3. **Dynamic Scalability Cost Efficiency:**
+
+    - Reduces time and cost for providers due to dynamic scalability.
+
+4. **Global Connectivity and Trading:**
+
+    - Connects various cloud service providers globally, enabling buying and selling of services on demand.
+
+5. **Resource Scaling Ease:**
+    - Provides easy scaling up of resources to meet varying demands.
+
+**Challenges in Federated Cloud:**
+
+1. **Demand Distribution Scheme:**
+
+    - Challenge in distributing incoming demands equally among multiple cloud service providers in cloud federation.
+
+2. **Heterogeneous Infrastructure and Interoperability:**
+
+    - Increasing requests result in more heterogeneous infrastructure, posing interoperability challenges and making cloud users tied to specific providers.
+
+3. **Constructing Seamless Environment:**
+    - Building a seamless cloud environment that interacts with people, devices, application interfaces, and other entities presents a challenge.
+
+**Federated Cloud Technologies:**
+
+1. **OpenNebula:**
+
+    - A cloud computing platform for managing distributed data center infrastructures, emphasizing interoperability, leveraging existing IT assets, and protecting deals with an API.
+
+2. **Aneka Coordinator:**
+
+    - A proposition of Aneka services and peer components providing cloud ability and performance to interact with other cloud services.
+
+3. **Eucalyptus:**
+    - Defines pooled computational, storage, and network resources, scalable based on application workloads, offering an open-source framework for cloud environment access.
+
+**Levels of Federation:**
+
+1. **Conceptual Level:**
+
+    - Defines new opportunities and benefits of a federated environment for service providers and users, focusing on motivations, obligations, trust agreements, and transparency.
+
+2. **Logical and Operational Level:**
+
+    - Establishes policies, guidelines, and cooperation decisions, shaping the dynamic behavior of the federation. Addresses choices in using services from other providers and negotiating agreements.
+
+3. **Infrastructure Level:**
+    - Addresses technical obstacles using standardized protocols and interfaces, enabling various cloud computing systems to work seamlessly across different administrative domains.
+
+**Services of Cloud Federation:**
+
+1. **Active Directory Federation Services (ADFS):**
+
+    - _Purpose:_ Microsoft-developed Single Sign-On (SSO) system.
+    - _Function:_ Provides authenticated access to programs through Active Directory.
+    - _Authentication Management:_ Manages authentication through a proxy service, granting access using Federated Trust between ADFS and the intended application.
+    - _Authentication Process Phases:_
+        - User accesses a provided ADFS URL.
+        - User is verified by the company's AD service through ADFS.
+        - ADFS provides the user with an authentication claim.
+        - The target application decides access based on the Federated Trust service.
+
+2. **Cloud-based Single Sign-On and Identity Federation without ADFS:**
+
+    - _Purpose:_ Delegates user authentication duties to a different system through identity federation.
+    - _Benefits:_ Achieves single sign-on, centralizing access management and benefiting user experience, security, onboarding, logging, monitoring, and operational efficiency.
+
+3. **Radiant One Cloud Federation Service: You’re On-Premises IdP:**
+
+    - _Feature:_ Powered by identity virtualization.
+    - _Function:_ Isolates external and cloud applications from identity system complexity by delegating authentication against all identity stores to a single common virtual layer.
+
+4. **The Future of Cloud is Federated:**
+    - _Vision:_ The federated cloud model is seen as a democratizing force in the cloud market, allowing businesses to connect with customers, partners, and employees globally through local cloud providers. It promises to fulfill the potential of the cloud for end-users and enables data center operators and service providers to compete with global cloud providers.

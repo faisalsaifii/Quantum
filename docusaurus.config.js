@@ -23,7 +23,11 @@ const config = {
 		'@docusaurus/theme-mermaid',
 		// '@docusaurus/theme-search-algolia'
 	],
-	plugins: [require.resolve('docusaurus-lunr-search')],
+	plugins: [
+		require.resolve('docusaurus-lunr-search'),
+		'@docusaurus/plugin-ideal-image',
+		'docusaurus-plugin-image-zoom',
+	],
 
 	presets: [
 		[
@@ -45,7 +49,22 @@ const config = {
 	themeConfig:
 		/** @type {import('@docusaurus/preset-classic').ThemeConfig} */
 		({
-			// Replace with your project's social card
+			zoom: {
+				selector: '.markdown > img',
+				background: {
+					light: 'rgb(255, 255, 255)',
+					dark: 'rgb(50, 50, 50)',
+				},
+				config: {
+					// options you can specify via https://github.com/francoischalifour/medium-zoom#usage
+				},
+			},
+
+			colorMode: {
+				defaultMode: 'dark',
+				disableSwitch: false,
+				respectPrefersColorScheme: true,
+			},
 			tableOfContents: {
 				minHeadingLevel: 2,
 				maxHeadingLevel: 6,
@@ -58,59 +77,71 @@ const config = {
 					src: 'img/logo.svg',
 				},
 				items: [
+					// {
+					// 	type: 'docSidebar',
+					// 	sidebarId: 'allSemsSidebar',
+					// 	position: 'left',
+					// 	label: 'All Semesters',
+					// },
+					// {
+					// 	type: 'docSidebar',
+					// 	sidebarId: 'sem1Sidebar',
+					// 	position: 'left',
+					// 	label: 'Sem 1',
+					// },
+					// {
+					// 	type: 'docSidebar',
+					// 	sidebarId: 'sem2Sidebar',
+					// 	position: 'left',
+					// 	label: 'Sem 2',
+					// },
+					// {
+					// 	type: 'docSidebar',
+					// 	sidebarId: 'sem3Sidebar',
+					// 	position: 'left',
+					// 	label: 'Sem 3',
+					// },
+					// {
+					// 	type: 'docSidebar',
+					// 	sidebarId: 'sem4Sidebar',
+					// 	position: 'left',
+					// 	label: 'Sem 4',
+					// },
+					// {
+					// 	type: 'docSidebar',
+					// 	sidebarId: 'sem5Sidebar',
+					// 	position: 'left',
+					// 	label: 'Sem 5',
+					// },
+					// {
+					// 	type: 'docSidebar',
+					// 	sidebarId: 'sem6Sidebar',
+					// 	position: 'left',
+					// 	label: 'Sem 6',
+					// },
+					// {
+					// 	type: 'docSidebar',
+					// 	sidebarId: 'sem7Sidebar',
+					// 	position: 'left',
+					// 	label: 'Sem 7',
+					// },
+					// {
+					// 	type: 'docSidebar',
+					// 	sidebarId: 'sem8Sidebar',
+					// 	position: 'left',
+					// 	label: 'Sem 8',
+					// },
 					{
 						type: 'docSidebar',
-						sidebarId: 'allSemsSidebar',
+						sidebarId: 'aiSidebar',
 						position: 'left',
-						label: 'All Semesters',
+						label: 'Artificial Intelligence',
 					},
 					{
 						type: 'docSidebar',
-						sidebarId: 'sem1Sidebar',
+						sidebarId: 'ccSidebar',
 						position: 'left',
-						label: 'Sem 1',
-					},
-					{
-						type: 'docSidebar',
-						sidebarId: 'sem2Sidebar',
-						position: 'left',
-						label: 'Sem 2',
-					},
-					{
-						type: 'docSidebar',
-						sidebarId: 'sem3Sidebar',
-						position: 'left',
-						label: 'Sem 3',
-					},
-					{
-						type: 'docSidebar',
-						sidebarId: 'sem4Sidebar',
-						position: 'left',
-						label: 'Sem 4',
-					},
-					{
-						type: 'docSidebar',
-						sidebarId: 'sem5Sidebar',
-						position: 'left',
-						label: 'Sem 5',
-					},
-					{
-						type: 'docSidebar',
-						sidebarId: 'sem6Sidebar',
-						position: 'left',
-						label: 'Sem 6',
-					},
-					{
-						type: 'docSidebar',
-						sidebarId: 'sem7Sidebar',
-						position: 'left',
-						label: 'Sem 7',
-					},
-					{
-						type: 'docSidebar',
-						sidebarId: 'sem8Sidebar',
-						position: 'left',
-						label: 'Sem 8',
+						label: 'Cloud Computing',
 					},
 					{
 						href: 'https://github.com/faisalsaifii/Quantum',
@@ -150,6 +181,10 @@ const config = {
 								to: '/docs/category/6th-semester',
 							},
 							{
+								label: '7th Semester',
+								to: '/docs/category/7th-semester',
+							},
+							{
 								label: '8th Semester',
 								to: '/docs/category/8th-semester',
 							},
@@ -160,11 +195,11 @@ const config = {
 						items: [
 							{
 								label: 'Artificial Intelligence',
-								to: '/docs/category/artificial-intelligence',
+								to: '/docs/category/artificial-intelligence-1',
 							},
 							{
 								label: 'Renewable Energy Resources',
-								to: '/docs/category/renewable-energy-resources',
+								to: '/docs/category/renewable-energy-resources-1',
 							},
 						],
 					},

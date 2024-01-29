@@ -1,0 +1,73 @@
+---
+sidebar_position: 3
+---
+
+# Open Stack
+
+OpenStack is like a cloud operating system. It helps manage big groups of computers, storage, and networking in a data center. It's free and open-source, acting as Infrastructure as a Service (IaaS) for cloud computing.
+
+OpenStack is a software platform that uses shared virtual resources to build and oversee private and public clouds. It provides various default cloud services like networking, storage, image services, and identity. Users can control these services through a web-based dashboard, a RESTful API, or command-line tools. OpenStack efficiently manages many virtual machines, helping to minimize the use of physical resources.
+
+## Basic Principles of OpenStack
+
+1. **Open Source:** OpenStack is coded and shared under the Apache 2.0 license, allowing the community to use it freely.
+
+2. **Open Design:** The development group holds a Design Summit every six months to plan for future updates.
+
+3. **Open Development:** Developers maintain a freely accessible source code repository, utilized by projects like the Ubuntu Linux distribution via entities.
+
+4. **Open Community:** OpenStack promotes open and transparent documentation for the community.
+
+Components of OpenStack:
+
+1. **Compute (Nova):** Manages resources in virtualized environments, handling various virtual machines and computing tasks.
+
+2. **Object Storage (Swift):** Used for storing and retrieving diverse data in the cloud, including files, objects, backups, images, videos, and virtual machines. Swift uses unique identifiers instead of traditional paths to manage file locations.
+
+3. **Block Storage (Cinder):** Operates like attaching and detaching an external hard drive, managing disk space in the server. Provides virtual storage for virtual machines.
+
+4. **Networking (Neutron):** Manages networking in OpenStack, handling tasks such as IP address management, routers, subnets, firewalls, and VPNs. Ensures connectivity between all components in OpenStack.
+
+5. **Image Service (Glance):** Glance is the component in OpenStack that provides image services. Image services refer to images or virtual copies of hard disks. When deploying a new virtual machine instance, Glance allows the use of these images as templates. Glance supports various virtual image formats, including VirtualBox (VDI), VMware (VMDK, OVF), Raw, Hyper-V (VHD), and KVM (qcow2).
+
+6. **Telemetry (Ceilometer):** Used to measure usage and report it to individual users in OpenStack, providing billing services.
+
+7. **Orchestration (Heat):** Enables developers to store cloud application requirements in a file for easy availability of essential resources. Manages complex cloud applications through templates using the local OpenStack REST API and Query API.
+
+8. **Shared File System (Manila):** Provides file storage to virtual machines, offering infrastructure for managing and provisioning file shares.
+
+9. **Elastic Map-reduce (Sahara):** Sahara offers a straightforward way for users to create preplanned Hadoop clusters, specifying options such as Hadoop version, cluster topology, hardware details of nodes, and more.
+
+**Features of OpenStack:**
+
+1. **Modular Architecture:** Designed with a modular architecture, allowing users to deploy only the components they need, making customization and scaling easy to meet specific business requirements.
+
+2. **Multi-tenancy Support:** Provides multi-tenancy support, allowing multiple users to access the same cloud infrastructure while maintaining security and isolation. Crucial for cloud service providers serving multiple customers.
+
+3. **Open-Source Software:** OpenStack is free and open-source, enabling users to customize the platform without expensive proprietary software licenses.
+
+4. **Distributed Architecture:** Designed with a distributed architecture, facilitating horizontal scaling across multiple physical servers for handling large workloads and improving system performance.
+
+5. **API-Driven:** All components in OpenStack are API-driven, making it easy to access and control through a set of APIs. This simplifies automation and integration with other tools and services.
+
+6. **Comprehensive Dashboard:** Provides a user-friendly web interface for a comprehensive dashboard, allowing users to manage cloud infrastructure and resources without specialized technical skills.
+
+7. **Resource Pooling:** Enables pooling of computing, storage, and networking resources that can be dynamically allocated and deallocated based on demand. Optimizes resource utilization and reduces waste.
+
+**Advantages of using OpenStack:**
+
+1. **Rapid Resource Provisioning:** Enables quick provisioning of resources, making orchestration and scaling up/down of resources easy.
+
+2. **Efficient Application Deployment:** Applications can be deployed using OpenStack without consuming a significant amount of time.
+
+3. **Scalability of Resources:** Scalable resources allow for more efficient and wise utilization of available resources.
+
+4. **Manageable Regulatory Compliances:** The regulatory compliances associated with OpenStack usage are manageable, enhancing overall compliance control.
+
+**Disadvantages of using OpenStack:**
+
+1. **Limited Robustness in Orchestration:** OpenStack may lack robustness in orchestration compared to some alternatives.
+
+2. **Compatibility Issues with Hybrid Cloud Providers:** The APIs provided and supported by OpenStack are not compatible with many hybrid cloud providers, making integration with other solutions challenging.
+
+3. **Security Risks:** Like all cloud service providers, OpenStack services carry the risk of potential security breaches.

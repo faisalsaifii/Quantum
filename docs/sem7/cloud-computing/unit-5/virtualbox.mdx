@@ -1,0 +1,77 @@
+---
+sidebar_position: 2
+---
+
+# Virtual Box
+
+VirtualBox is a versatile virtualization application that operates across various platforms. This means it can be installed on Intel or AMD-based computers running Windows, macOS, Linux, or Oracle Solaris operating systems. Its primary functions include enhancing existing computer capabilities to run multiple operating systems (OSes) simultaneously within virtual machines.
+
+For example, you can run Windows and Linux concurrently on a Mac, deploy Windows Server on a Linux server, or operate Linux on a Windows PC. This allows seamless integration with existing applications. VirtualBox imposes minimal constraints, enabling users to install and run numerous virtual machines, limited only by available disk space and memory.
+
+Oracle VM VirtualBox, despite its apparent simplicity, is a potent tool capable of functioning on diverse systems, from small embedded setups and desktop machines to large datacenter deployments and cloud environments. The application facilitates running multiple OSes on a single computer, providing flexibility and efficiency.
+
+In the provided screenshot, Oracle VM VirtualBox is demonstrated on an Apple Mac computer, concurrently running Windows Server 2016 within a virtual machine window.
+
+This User Manual starts with a brief introduction to virtualization and guides you through setting up your first virtual machine using the user-friendly Oracle VM VirtualBox graphical interface. While later chapters delve into more advanced tools and features, it's reassuring to know that you don't need to read the entire manual before using Oracle VM VirtualBox. The manual is designed to be accessible, allowing you to get started quickly.
+
+Oracle VM VirtualBox provides useful techniques and features in various scenarios:
+
+1. **Running Multiple Operating Systems Simultaneously:**
+
+    - Benefit: Enables simultaneous operation of multiple operating systems.
+    - Example: Allows running Windows software on Linux or Mac without rebooting. Configurable virtual hardware lets you install older or unsupported operating systems like DOS or OS/2.
+
+2. **Easier Software Installations:**
+
+    - Benefit: Software vendors can package entire software configurations into virtual machines.
+    - Example: Complex setups, like a mail server solution, can be simplified into a virtual machine "appliance," making installation and running as straightforward as importing it into Oracle VM VirtualBox.
+
+3. **Testing and Disaster Recovery:**
+
+    - Benefit: Virtual machines serve as containers that can be frozen, copied, backed up, and transported.
+    - Example: Ideal for building and testing multi-node networked services. Allows easy investigation of issues related to networking, operating systems, and software configuration.
+
+4. **Infrastructure Consolidation:**
+    - Benefit: Reduces hardware and electricity costs through virtualization.
+    - Explanation: Many computers today operate at low system loads, wasting hardware resources and electricity. Virtualization enables consolidating multiple virtual machines onto a few powerful hosts, optimizing resource usage and load balancing.
+
+## Features of Oracle VM VirtualBox
+
+1. **Portability:**
+
+    - _Definition:_ Oracle VM VirtualBox operates on numerous 64-bit host operating systems.
+    - _Type:_ Hosted Hypervisor (Type 2).
+    - _Explanation:_ As a hosted hypervisor, it runs on top of an existing operating system (OS), allowing it to coexist with other applications on the host. Unlike bare-metal or type 1 hypervisors, which run directly on hardware, Oracle VM VirtualBox requires a pre-installed OS.
+
+2. **Guest Additions: Shared Folders, Seamless Windows, 3D Virtualization:**
+    - _Description:_ Oracle VM VirtualBox Guest Additions are software packages installed within supported guest systems to enhance performance and facilitate better integration with the host system.
+    - _Benefits:_
+        - Shared Folders: Allows seamless sharing of folders between host and guest systems.
+        - Seamless Windows: Enhances user experience by providing seamless transition between the host and guest desktops.
+        - 3D Virtualization: Supports accelerated 3D graphics for improved visual performance.
+    - _Additional Features:_ After installing Guest Additions, a virtual machine supports automatic adjustment of video resolutions and more, contributing to an enhanced virtualization experience.
+
+**Key Hardware Support Features of Oracle VM VirtualBox:**
+
+1. **Guest Multiprocessing (SMP):**
+
+    - _Capability:_ Supports up to 32 virtual CPUs for each virtual machine, regardless of the number of physical CPU cores on the host.
+
+2. **USB Device Support:**
+
+    - _Implementation:_ Virtualizes a USB controller, allowing seamless connection of various USB devices to virtual machines without needing host-specific drivers. This support extends to a wide range of USB device categories.
+
+3. **Hardware Compatibility:**
+
+    - _Virtual Devices:_ Oracle VM VirtualBox virtualizes various devices, including IDE, SCSI, and SATA hard disk controllers, multiple virtual network cards, sound cards, virtual serial and parallel ports, and an Input/Output Advanced Programmable Interrupt Controller (I/O APIC). This enables easy cloning of disk images from physical machines and importing third-party virtual machines.
+
+4. **Full ACPI Support:**
+
+    - _Feature:_ Fully supports the Advanced Configuration and Power Interface (ACPI), facilitating easy cloning of disk images from real machines or third-party virtual machines. Unique ACPI power status support enables reporting of the host's power status to ACPI-aware guest OSes, allowing for energy-saving measures and notifying users of remaining power, especially on battery-powered systems.
+
+5. **Multiscreen Resolutions:**
+
+    - _Capability:_ Virtual machines support resolutions significantly higher than physical screens, enabling them to span across multiple screens connected to the host system.
+
+6. **Built-in iSCSI Support:**
+    - _Unique Feature:_ Allows direct connection of a virtual machine to an iSCSI storage server without involving the host system. This direct access reduces overhead associated with virtualizing hard disks, enhancing performance when accessing iSCSI targets.
